@@ -12,6 +12,10 @@ header {
     display:flex;
 }
 
+h1 {
+    margin-bottom: 10px;
+}
+
 h3 {
     display: inline-block;
     margin: 0 5px;
@@ -66,4 +70,12 @@ h3 {
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
+}
+
+button {
+    width: 10vw;
+    margin-top: 10px;
+    background-color: rgb(255, 39, 39);
+    border-radius: 15px;
+    border-color: rgb(201, 38, 38);
 }
