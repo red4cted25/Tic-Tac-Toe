@@ -11,6 +11,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: -1;
 }
 
 header {
@@ -34,7 +35,7 @@ h3 {
 
 @keyframes silly {
     0%{
-        transform: rotate();
+        transform: rotate(0deg);
     }
     100%{
         transform: rotate(360deg);
@@ -77,10 +78,9 @@ h3 {
 
 .win {
     animation-name: silly;
-    animation-duration: 1s;
+    animation-duration: 0.5s;
     animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
+    animation-timing-function: ease-in-out;
 }
 
 button {

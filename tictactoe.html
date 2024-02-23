@@ -21,8 +21,8 @@
         </div>
         <button onclick="resetBoard()">Reset Board</button>
     </header>
-    <img src="./Images/tttboard.png" alt="Tic-Tac-Toe Board" class="board">
-    <div class="board-grid">
+    <img src="./Images/tttboard.png" alt="Tic-Tac-Toe Board" class="board" id="board">
+    <div class="board-grid" id="spaces">
         <div onclick="placeLetter(0, 0, '1')" class="box" id="1"></div>
         <div onclick="placeLetter(0, 1, '2')" class="box" id="2"></div>
         <div onclick="placeLetter(0, 2, '3')" class="box" id="3"></div>
@@ -32,6 +32,7 @@
         <div onclick="placeLetter(2, 0, '7')" class="box" id="7"></div>
         <div onclick="placeLetter(2, 1, '8')" class="box" id="8"></div>
         <div onclick="placeLetter(2, 2, '9')" class="box" id="9"></div>
+    
     </div>
     <script src="tictactoe.js"></script>
 </body>
