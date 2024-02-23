@@ -15,16 +15,19 @@ const placeLetter = (y, x, id) => {
             placementArray[y][x] = 2;
             img.src = "./Images/X.png";
             document.getElementById("player").innerHTML = "O";
+            document.body.style.backgroundColor = "rgb(103, 136, 255)";
         } else {
             placementArray[y][x] = 1;
             img.src = "./Images/O.png";
             document.getElementById("player").innerHTML = "X";
+            document.body.style.backgroundColor = "rgb(255, 103, 103)";
         }
+        document.getElementById(id).appendChild(img);
+        num++;
+        winCheck();
     }
-    document.getElementById(id).appendChild(img);
-    num++;
-    winCheck();
 }
+
 
 let winCheck = () => {
     // Check Rows/Columns
@@ -35,12 +38,14 @@ let winCheck = () => {
                 oWins++;
                 document.getElementById("o-wins").innerHTML = oWins;
                 gameOver = true;
+                document.body.style.backgroundColor = "rgb(103, 136, 255)";
                 return;
             } else if(placementArray[i][0] == 2) {
                 document.getElementById("winner").innerHTML = "X Won!";
                 xWins++;
                 document.getElementById("x-wins").innerHTML = xWins;
                 gameOver = true;
+                document.body.style.backgroundColor = "rgb(255, 103, 103)";
                 return;
             }
         }
@@ -50,12 +55,14 @@ let winCheck = () => {
                 oWins++;
                 document.getElementById("o-wins").innerHTML = oWins;
                 gameOver = true;
+                document.body.style.backgroundColor = "rgb(103, 136, 255)";
                 return;
             } else if(placementArray[0][i] == 2) {
                 document.getElementById("winner").innerHTML = "X Won!";
                 xWins++;
                 document.getElementById("x-wins").innerHTML = xWins;
                 gameOver = true;
+                document.body.style.backgroundColor = "rgb(255, 103, 103)";
                 return;
             }
         }
@@ -68,12 +75,14 @@ let winCheck = () => {
             oWins++;
             document.getElementById("o-wins").innerHTML = oWins;
             gameOver = true;
+            document.body.style.backgroundColor = "rgb(103, 136, 255)";
             return;
         } else if(placementArray[0][0] == 2) {
             document.getElementById("winner").innerHTML = "X Won!";
             xWins++;
             document.getElementById("x-wins").innerHTML = xWins;
             gameOver = true;
+            document.body.style.backgroundColor = "rgb(255, 103, 103)";
             return;
         }
     }
@@ -83,12 +92,14 @@ let winCheck = () => {
             oWins++;
             document.getElementById("o-wins").innerHTML = oWins;
             gameOver = true;
+            document.body.style.backgroundColor = "rgb(103, 136, 255)";
             return;
         } else if(placementArray[0][2] == 2) {
             document.getElementById("winner").innerHTML = "X Won!";
             xWins++;
             document.getElementById("x-wins").innerHTML = xWins;
             gameOver = true;
+            document.body.style.backgroundColor = "rgb(255, 103, 103)";
             return;
         }
     }
@@ -105,6 +116,8 @@ let winCheck = () => {
 
     // If tie, show "Cat's Game!"
     document.getElementById("winner").innerHTML = "Cat's Game!";
+    gameOver = true;
+    document.body.style.backgroundColor = "rgb(85, 90, 105)";
     return;
 }
 
